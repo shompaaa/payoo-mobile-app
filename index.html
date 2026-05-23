@@ -1,11 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo Mobile App</title>
-</head>
-<body>
-    
-</body>
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center">
+    <div class="mb-8">
+        <img class="h-[70px]" src="./assets/Logo-full.png" alt="Payoo Logo">
+    </div>
+    <form class="p-8 bg-white rounded-2xl w-[350px]">
+        <div>
+            <label for="" class="text-md font-semibold">Mobile Number</label><br>
+            <input type="text" class="my-3 input rounded-xl" placeholder="Enter your number">
+        </div>
+        <div>
+            <label for="" class="text-md font-semibold">4 Digit Pin</label><br>
+            <input type="password" class="my-3 input rounded-xl" placeholder="Enter 4 digit PIN">
+        </div>
+        <button class="btn btn-primary w-full rounded-xl">Login</button>
+    </form>
+  </body>
 </html>
