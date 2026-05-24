@@ -22,54 +22,116 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F4F5F7] h-[100vh]">
-    <div class="flex justify-between max-w-lg mx-auto p-5 border-b-1 border-gray-300">
-      <div class="flex">
-        <img class="h-[45px] w-[55px]" src="./assets/logo.png" alt="logo" />
+  <body class="bg-[#F4F5F7]">
+    <div class="max-w-lg mx-auto">
+      <!-- Navbar Section -->
+      <div class="flex justify-between p-5 border-b-1 border-gray-300">
+        <div class="flex">
+          <img class="h-[45px] w-[55px]" src="./assets/logo.png" alt="logo" />
+          <div>
+            <h2>$<span id="available-balance">450000</span></h2>
+            <p class="text-[#08080880]">Available Balance</p>
+          </div>
+        </div>
         <div>
-          <h2>$50000</h2>
-          <p class="text-[#08080880]">Available Balance</p>
+          <button class="btn btn-default text-[#08080880]">
+            <i
+              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"
+            ></i>
+            Log Out
+          </button>
         </div>
       </div>
-      <div>
-        <button class="btn btn-default text-[#08080880]">
-          <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"></i> Log Out
-        </button>
+
+      <!-- Header Section -->
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold">
+          Welcome to Pay<span class="text-[#7460FF]">oo</span>
+        </h2>
+        <p class="text-[#08080880] mb-5">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+      <!-- Card -->
+      <div class="grid grid-cols-3 gap-4">
+        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+          <img src="./assets//opt-1.png" alt="" class="mx-auto" />
+          <p>Add Money</p>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+          <img src="./assets//opt-2.png" alt="" class="mx-auto" />
+          <p>Cash Out</p>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+          <img src="./assets//opt-3.png" alt="" class="mx-auto" />
+          <p>Transfer Money</p>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+          <img src="./assets//opt-4.png" alt="" class="mx-auto" />
+          <p>Get Bonus</p>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+          <img src="./assets//opt-5.png" alt="" class="mx-auto" />
+          <p>Pay Bill</p>
+        </div>
+        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+          <img src="./assets//opt-6.png" alt="" class="mx-auto" />
+          <p>Transactions</p>
+        </div>
+      </div>
+      <!-- Form -->
+      <div class="">
+        <h2 class="text-lg font-semibold my-4">Add Money</h2>
+        <div class="bg-white p-6 rounded-2xl">
+          <form action="">
+            <label for="" class="text-[#08080880]">Select a Bank</label><br />
+            <select
+              name=""
+              id="select-bank"
+              class="select my-4 rounded-2xl w-full bg-[#F4F7F5]"
+            >
+              <option disabled selected>Select Bank</option>
+              <option>Dutch Bangla Bank</option>
+              <option>IFC Bank</option>
+              <option>AB Bank</option>
+            </select>
+            <br />
+            <label for="" class="text-[#08080880]">Bank Account No</label><br />
+            <input
+              class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+              type="text"
+              name=""
+              id="account-number"
+              placeholder="Enter 11 digit account number"
+            />
+            <br />
+            <label for="" class="text-[#08080880]">Amount to Add</label><br />
+            <input
+              class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+              type="text"
+              name=""
+              id="add-amount"
+              placeholder="Add Amount to Withdraw"
+            />
+            <br />
+            <label for="" class="text-[#08080880]">PIN Number</label><br />
+            <input
+              class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+              type="text"
+              name=""
+              id="pin-number"
+              placeholder="4 digit PIN"
+            />
+            <br />
+            <button id="addMoney-btn" class="btn btn-primary w-full rounded-xl">
+              Add Money
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
-    <div class="max-w-lg mx-auto mt-8">
-        <h2 class="text-2xl font-bold">Welcome to Pay<span class="text-[#7460FF]">oo</span></h2>
-        <p class="text-[#08080880] mb-5">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
-    </div>
-
-    <div class="max-w-lg mx-auto grid grid-cols-3 gap-4">
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
-            <img src="./assets//opt-1.png" alt="" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
-            <img src="./assets//opt-2.png" alt="" class="mx-auto">
-            <p>Cash Out</p>
-        </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
-            <img src="./assets//opt-3.png" alt="" class="mx-auto">
-            <p>Transfer Money</p>
-        </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
-            <img src="./assets//opt-4.png" alt="" class="mx-auto">
-            <p>Get Bonus</p>
-        </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
-            <img src="./assets//opt-5.png" alt="" class="mx-auto">
-            <p>Pay Bill</p>
-        </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
-            <img src="./assets//opt-6.png" alt="" class="mx-auto">
-            <p>Transactions</p>
-        </div>
-    </div>
-
-    <script src="./script.js"></script>
+    <script src="./home.js"></script>
   </body>
 </html>
