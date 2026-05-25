@@ -26,6 +26,15 @@ function setInnerText(value) {
   availableBalanceElement.innerText = value;
 }
 
+//Function to Toggle
+function handleToggle(id) {
+  const forms = document.getElementsByClassName("form");
+  for (const form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+
 //Add Money Feature
 document.getElementById("addMoney-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -44,7 +53,7 @@ document.getElementById("addMoney-btn").addEventListener("click", function (e) {
     return;
   }
   const newBalance = addedAmount + availableBalance;
-  setInnerText(newBalance)
+  setInnerText(newBalance);
 });
 
 //Cash Out Feature
@@ -59,15 +68,37 @@ document
       alert("Insufficient Balance");
       return;
     }
-    setInnerText(newBalance)
+    setInnerText(newBalance);
+  });
+
+//Transfer Money Feature
+document
+  .getElementById("transferAmount-btn")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
   });
 
 /** Toggling Feature */
 document.getElementById("addMoney").addEventListener("click", function () {
-  document.getElementById("addMoney-form").style.display = "block";
+  handleToggle("addMoney-form");
 });
 
 document.getElementById("cashOut").addEventListener("click", function () {
-  document.getElementById("addMoney-form").style.display = "none";
-  document.getElementById("cashOut-form").style.display = "block";
+  handleToggle("cashOut-form");
+});
+
+document.getElementById("transferMoney").addEventListener("click", function () {
+  handleToggle("transferMoney-form");
+});
+
+document.getElementById("getBonus").addEventListener("click", function () {
+  handleToggle("getBonus-form");
+});
+
+document.getElementById("payBill").addEventListener("click", function () {
+  handleToggle("payBill-form");
+});
+
+document.getElementById("transactions").addEventListener("click", function () {
+  handleToggle("transactions-form");
 });

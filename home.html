@@ -100,7 +100,7 @@
       </div>
       <div>
         <!-- Add Money Form -->
-        <div id="addMoney-form">
+        <div id="addMoney-form" class="form">
           <h2 class="text-lg font-semibold my-4">Add Money</h2>
           <div class="bg-white p-6 rounded-2xl">
             <form action="">
@@ -155,12 +155,11 @@
         </div>
 
         <!-- Cash Out Form -->
-        <div id="cashOut-form" class="hidden">
+        <div id="cashOut-form" class="form hidden">
           <h2 class="text-lg font-semibold my-4">Cash Out</h2>
           <div class="bg-white p-6 rounded-2xl">
             <form action="">
-              <label for="" class="text-[#08080880]">Agent Number</label
-              ><br />
+              <label for="" class="text-[#08080880]">Agent Number</label><br />
               <input
                 class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
                 type="text"
@@ -192,6 +191,127 @@
                 class="btn btn-primary w-full rounded-xl"
               >
                 Withdraw Money
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Transfer Money Form -->
+        <div id="transferMoney-form" class="form hidden">
+          <h2 class="text-lg font-semibold my-4">Transfer Money</h2>
+          <div class="bg-white p-6 rounded-2xl">
+            <form action="">
+              <label for="" class="text-[#08080880]">User Account Number</label
+              ><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="account-number"
+                placeholder="Enter account number"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">Amount</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="transfer-amount"
+                placeholder="Add Amount to Transfer"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">PIN Number</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="pin-number"
+                placeholder="4 digit PIN"
+              />
+              <br />
+              <button
+                id="transferAmount-btn"
+                class="btn btn-primary w-full rounded-xl"
+              >
+                Send Now
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Get Bonus Form -->
+        <div id="getBonus-form" class="form hidden">
+          <h2 class="text-lg font-semibold my-4">Get Bonus</h2>
+          <div class="bg-white p-6 rounded-2xl">
+            <form action="">
+              <label for="" class="text-[#08080880]">Bonus Coupon</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="bonus-couponr"
+                placeholder="Enter bonus coupon"
+              />
+              <br />
+
+              <button
+                id="getBonus-btn"
+                class="btn btn-primary w-full rounded-xl"
+              >
+                Get Bonus
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Pay Bill Form -->
+          <div id="payBill-form" class="form">
+          <h2 class="text-lg font-semibold my-4">Pay Bill</h2>
+          <div class="bg-white p-6 rounded-2xl">
+            <form action="">
+              <label for="" class="text-[#08080880]">Select to Pay</label><br />
+              <select
+                name=""
+                id="select-bank"
+                class="select my-4 rounded-2xl w-full bg-[#F4F7F5]"
+              >
+                <option disabled selected>Select Bank</option>
+                <option>Dutch Bangla Bank</option>
+                <option>IFC Bank</option>
+                <option>AB Bank</option>
+              </select>
+              <br />
+              <label for="" class="text-[#08080880]">Biller Account Number</label
+              ><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="account-number"
+                placeholder="Enter 11 digit account number"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">Amount to Pay</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="pay-amount"
+                placeholder="Pay Amount"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">PIN Number</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="pin-number"
+                placeholder="4 digit PIN"
+              />
+              <br />
+              <button
+                id="payNow-btn"
+                class="btn btn-primary w-full rounded-xl"
+              >
+                Pay Now
               </button>
             </form>
           </div>
