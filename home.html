@@ -22,7 +22,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F4F5F7]">
+  <body class="bg-[#F4F5F7] min-h-[100vh]">
     <div class="max-w-lg mx-auto">
       <!-- Navbar Section -->
       <div class="flex justify-between p-5 border-b-1 border-gray-300">
@@ -55,79 +55,146 @@
       </div>
       <!-- Card -->
       <div class="grid grid-cols-3 gap-4">
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+        <div
+          id="addMoney"
+          class="border-1 border-gray-300 text-center p-5 rounded-2xl"
+        >
           <img src="./assets//opt-1.png" alt="" class="mx-auto" />
           <p>Add Money</p>
         </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+        <div
+          id="cashOut"
+          class="border-1 border-gray-300 text-center p-5 rounded-2xl"
+        >
           <img src="./assets//opt-2.png" alt="" class="mx-auto" />
           <p>Cash Out</p>
         </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+        <div
+          id="transferMoney"
+          class="border-1 border-gray-300 text-center p-5 rounded-2xl"
+        >
           <img src="./assets//opt-3.png" alt="" class="mx-auto" />
           <p>Transfer Money</p>
         </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+        <div
+          id="getBonus"
+          class="border-1 border-gray-300 text-center p-5 rounded-2xl"
+        >
           <img src="./assets//opt-4.png" alt="" class="mx-auto" />
           <p>Get Bonus</p>
         </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+        <div
+          id="payBill"
+          class="border-1 border-gray-300 text-center p-5 rounded-2xl"
+        >
           <img src="./assets//opt-5.png" alt="" class="mx-auto" />
           <p>Pay Bill</p>
         </div>
-        <div class="border-1 border-gray-300 text-center p-5 rounded-2xl">
+        <div
+          id="transactions"
+          class="border-1 border-gray-300 text-center p-5 rounded-2xl"
+        >
           <img src="./assets//opt-6.png" alt="" class="mx-auto" />
           <p>Transactions</p>
         </div>
       </div>
-      <!-- Form -->
-      <div class="">
-        <h2 class="text-lg font-semibold my-4">Add Money</h2>
-        <div class="bg-white p-6 rounded-2xl">
-          <form action="">
-            <label for="" class="text-[#08080880]">Select a Bank</label><br />
-            <select
-              name=""
-              id="select-bank"
-              class="select my-4 rounded-2xl w-full bg-[#F4F7F5]"
-            >
-              <option disabled selected>Select Bank</option>
-              <option>Dutch Bangla Bank</option>
-              <option>IFC Bank</option>
-              <option>AB Bank</option>
-            </select>
-            <br />
-            <label for="" class="text-[#08080880]">Bank Account No</label><br />
-            <input
-              class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
-              type="text"
-              name=""
-              id="account-number"
-              placeholder="Enter 11 digit account number"
-            />
-            <br />
-            <label for="" class="text-[#08080880]">Amount to Add</label><br />
-            <input
-              class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
-              type="text"
-              name=""
-              id="add-amount"
-              placeholder="Add Amount to Withdraw"
-            />
-            <br />
-            <label for="" class="text-[#08080880]">PIN Number</label><br />
-            <input
-              class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
-              type="text"
-              name=""
-              id="pin-number"
-              placeholder="4 digit PIN"
-            />
-            <br />
-            <button id="addMoney-btn" class="btn btn-primary w-full rounded-xl">
-              Add Money
-            </button>
-          </form>
+      <div>
+        <!-- Add Money Form -->
+        <div id="addMoney-form">
+          <h2 class="text-lg font-semibold my-4">Add Money</h2>
+          <div class="bg-white p-6 rounded-2xl">
+            <form action="">
+              <label for="" class="text-[#08080880]">Select a Bank</label><br />
+              <select
+                name=""
+                id="select-bank"
+                class="select my-4 rounded-2xl w-full bg-[#F4F7F5]"
+              >
+                <option disabled selected>Select Bank</option>
+                <option>Dutch Bangla Bank</option>
+                <option>IFC Bank</option>
+                <option>AB Bank</option>
+              </select>
+              <br />
+              <label for="" class="text-[#08080880]">Bank Account No</label
+              ><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="account-number"
+                placeholder="Enter 11 digit account number"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">Amount to Add</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="add-amount"
+                placeholder="Add Amount"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">PIN Number</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="pin-number"
+                placeholder="4 digit PIN"
+              />
+              <br />
+              <button
+                id="addMoney-btn"
+                class="btn btn-primary w-full rounded-xl"
+              >
+                Add Money
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Cash Out Form -->
+        <div id="cashOut-form" class="hidden">
+          <h2 class="text-lg font-semibold my-4">Cash Out</h2>
+          <div class="bg-white p-6 rounded-2xl">
+            <form action="">
+              <label for="" class="text-[#08080880]">Agent Number</label
+              ><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="agent-number"
+                placeholder="Enter agent number"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">Amount</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="withdraw-amount"
+                placeholder="Add Amount to Withdraw"
+              />
+              <br />
+              <label for="" class="text-[#08080880]">PIN Number</label><br />
+              <input
+                class="input my-4 rounded-2xl w-full bg-[#F4F7F5]"
+                type="text"
+                name=""
+                id="pin-number"
+                placeholder="4 digit PIN"
+              />
+              <br />
+              <button
+                id="withdrawMoney-btn"
+                class="btn btn-primary w-full rounded-xl"
+              >
+                Withdraw Money
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
