@@ -4,13 +4,11 @@ const mobileNumber = 1234567890
 const pinNUmber = 1234
 document.getElementById('login-btn').addEventListener('click',function(e){
     e.preventDefault()
-    const mobileNumberValue = document.getElementById('mobileNumber').value
-    const convertedMobileNumberValue = parseInt(mobileNumberValue)
+    const mobileNumberValue = parseInt(document.getElementById('mobileNumber').value)
 
-    const pinNUmberValue = document.getElementById('pinNumber').value
-    const convertedPinNumberValue = parseInt(pinNUmberValue)
+    const pinNUmberValue = parseInt(document.getElementById('pinNumber').value)
 
-    if(mobileNumber === convertedMobileNumberValue && pinNUmber === convertedPinNumberValue){
+    if(mobileNumber === mobileNumberValue && pinNUmber === pinNUmberValue){
         window.location.href='/home.html'
     } 
     else{

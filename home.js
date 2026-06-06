@@ -35,6 +35,18 @@ function handleToggle(id) {
   document.getElementById(id).style.display = "block";
 }
 
+//Function to Toggle Button
+function handleButtonToggle(id){
+   const formBtns = document.getElementsByClassName('form-btn')
+   for(const btn of formBtns){
+    btn.classList.remove('border-[#0874f2]','bg-[#0874f20d]')
+    btn.classList.add('border-gray-300')
+   }
+
+   document.getElementById(id).classList.remove('border-gray-300')
+   document.getElementById(id).classList.add("border-[#0874f2]","bg-[#0874f20d]")
+}
+
 //Add Money Feature
 document.getElementById("addMoney-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -81,24 +93,30 @@ document
 /** Toggling Feature */
 document.getElementById("addMoney").addEventListener("click", function () {
   handleToggle("addMoney-form");
+  handleButtonToggle('addMoney')
 });
 
 document.getElementById("cashOut").addEventListener("click", function () {
   handleToggle("cashOut-form");
+  handleButtonToggle('cashOut')
 });
 
 document.getElementById("transferMoney").addEventListener("click", function () {
   handleToggle("transferMoney-form");
+  handleButtonToggle('transferMoney')
 });
 
 document.getElementById("getBonus").addEventListener("click", function () {
   handleToggle("getBonus-form");
+  handleButtonToggle('getBonus')
 });
 
 document.getElementById("payBill").addEventListener("click", function () {
   handleToggle("payBill-form");
+  handleButtonToggle('payBill')
 });
 
 document.getElementById("transactions").addEventListener("click", function () {
   handleToggle("transactions-form");
+  handleButtonToggle('transactions')
 });
