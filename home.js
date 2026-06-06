@@ -1,5 +1,5 @@
 const validPin = 1234;
-
+const transactionData = [];
 /*Reuseable Function*/
 
 //Function to get Input value with ParseInt()
@@ -36,15 +36,17 @@ function handleToggle(id) {
 }
 
 //Function to Toggle Button
-function handleButtonToggle(id){
-   const formBtns = document.getElementsByClassName('form-btn')
-   for(const btn of formBtns){
-    btn.classList.remove('border-[#0874f2]','bg-[#0874f20d]')
-    btn.classList.add('border-gray-300')
-   }
+function handleButtonToggle(id) {
+  const formBtns = document.getElementsByClassName("form-btn");
+  for (const btn of formBtns) {
+    btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]");
+    btn.classList.add("border-gray-300");
+  }
 
-   document.getElementById(id).classList.remove('border-gray-300')
-   document.getElementById(id).classList.add("border-[#0874f2]","bg-[#0874f20d]")
+  document.getElementById(id).classList.remove("border-gray-300");
+  document
+    .getElementById(id)
+    .classList.add("border-[#0874f2]", "bg-[#0874f20d]");
 }
 
 //Add Money Feature
@@ -66,6 +68,12 @@ document.getElementById("addMoney-btn").addEventListener("click", function (e) {
   }
   const newBalance = addedAmount + availableBalance;
   setInnerText(newBalance);
+
+  const data = {
+    name: "Add Money",
+    date: new Date().toLocaleDateString(),
+  };
+  transactionData.push(data);
 });
 
 //Cash Out Feature
@@ -81,6 +89,11 @@ document
       return;
     }
     setInnerText(newBalance);
+    const data = {
+      name: "Cash Out",
+      date: new Date().toLocaleDateString(),
+    };
+    transactionData.push(data);
   });
 
 //Transfer Money Feature
@@ -90,33 +103,57 @@ document
     e.preventDefault();
   });
 
+//Transactions Feature
+document.getElementById("transactions").addEventListener("click", function () {
+  const transactionContainer = document.getElementById("transaction-container");
+  transactionContainer.innerText = "";
+  for (const data of transactionData) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="flex items-center justify-between bg-white mb-3 rounded-xl p-3">
+        <div class="flex items-center">
+        <div class="p-3 rounded-full bg-[#f4f5f7]">
+          <img src="assets/opt-1.png" class="mx-auto" alt="">
+        </div>
+        <div class="ml-3">
+          <h1>${data.name}</h1>
+          <p>${data.date}</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-ellipsis-vertical text-[#08080880]"></i>
+      </div>
+    `;
+    transactionContainer.appendChild(div);
+  }
+});
+
 /** Toggling Feature */
 document.getElementById("addMoney").addEventListener("click", function () {
   handleToggle("addMoney-form");
-  handleButtonToggle('addMoney')
+  handleButtonToggle("addMoney");
 });
 
 document.getElementById("cashOut").addEventListener("click", function () {
   handleToggle("cashOut-form");
-  handleButtonToggle('cashOut')
+  handleButtonToggle("cashOut");
 });
 
 document.getElementById("transferMoney").addEventListener("click", function () {
   handleToggle("transferMoney-form");
-  handleButtonToggle('transferMoney')
+  handleButtonToggle("transferMoney");
 });
 
 document.getElementById("getBonus").addEventListener("click", function () {
   handleToggle("getBonus-form");
-  handleButtonToggle('getBonus')
+  handleButtonToggle("getBonus");
 });
 
 document.getElementById("payBill").addEventListener("click", function () {
   handleToggle("payBill-form");
-  handleButtonToggle('payBill')
+  handleButtonToggle("payBill");
 });
 
 document.getElementById("transactions").addEventListener("click", function () {
   handleToggle("transactions-form");
-  handleButtonToggle('transactions')
+  handleButtonToggle("transactions");
 });
