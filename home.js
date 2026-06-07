@@ -1,5 +1,7 @@
 const validPin = 1234;
 const transactionData = [];
+
+
 /*Reuseable Function*/
 
 //Function to get Input value with ParseInt()
